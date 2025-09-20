@@ -1,0 +1,18 @@
+<h1><%= @post.title %></h1>
+
+<% if @post.published? %>
+  <p>Published on <%= @post.published_at.strftime("%Y-%m-%d") %></p>
+<% end %>
+
+<div class="content">
+  <%= sanitize(@post.content) %>
+</div>
+
+<% @comments.each do |comment| %>
+  <div class="comment">
+    <%= comment.author.name %> said:
+    <%= comment.body %>
+  </div>
+<% end %>
+
+<%= link_to "Edit", edit_post_path(@post) %>
