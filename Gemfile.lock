@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    calltally-erb (0.1.0)
+    calltally-erb (0.1.1)
       calltally (>= 0.3.0)
       herb (~> 0.1)
 
